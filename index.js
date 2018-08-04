@@ -40,7 +40,7 @@ cmd.run(bot, message, args);
 
 
 bot.on('guildMemberAdd', member =>{
-  let channel = member.guild.channels.find('name', 'boas-vindas');
+  let channel = member.guild.channels.find('name', '👉-entrou-saiu');
   let memberavatar = member.user.avatarURL
       if (!channel) return;
       let embed = new Discord.RichEmbed()
