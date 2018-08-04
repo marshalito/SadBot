@@ -13,7 +13,7 @@ module.exports.run = async(client, message, args) => {
                 .setDescription(`**Autor:** ${message.author.username}
 **Sugestão:** ${sugestao}
 **Por que deveríamos implementar:** ${motivo}`)
-                .setFooter("Dream - Sugestões", message.author.displayAvatarURL)
+                .setFooter("Mais 1 sugestão foi enviada!", message.author.displayAvatarURL)
                 let canal = message.guild.channels.find("name", 'sugestões')
                 if (!canal) return message.channel.send("**[SUPERIOR]** Crie um canal para que o player " + message.author.username + " possa fazer um report!");
                 canal.send({ embed: reportplayer });
