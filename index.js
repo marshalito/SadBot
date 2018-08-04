@@ -41,13 +41,10 @@ cmd.run(bot, message, args);
 
 bot.on('guildMemberAdd', member =>{
   let channel = member.guild.channels.find('name', '👉-entrou-saiu');
-  let memberavatar = member.user.avatarURL
       if (!channel) return;
       let embed = new Discord.RichEmbed()
-      .setAuthor("PapoSad u_u", member.user.displayAvatarURL)
       .setColor('RANDOM')
-      .addField('Bem-vindo!', `${member}, leia as regras e se divirta!`)
-      .setTimestamp()
+      .setDescription(`:heavy_check_mark: Olá! Seja bem-vindo ao **PapoSad**, ${member}.`)
 
       channel.sendEmbed(embed);
 });
@@ -67,6 +64,17 @@ bot.on('guildMemberAdd', member =>{
   .setTimestamp()
 
   member.sendEmbed(embed);
+});
+
+bot.on('guildMemberRemove', member =>{
+  let channel = member.guild.channels.find('name', '👉-entrou-saiu');
+  let memberavatar = member.user.avatarURL
+      if (!channel) return;
+      let embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setDescription(`:x: Vixi, **${member}** saiu, espero que tenha se arrependido. ;)`)
+
+      channel.sendEmbed(embed);
 });
 
 bot.login(process.env.BOT_TOKEN);
