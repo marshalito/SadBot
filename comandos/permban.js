@@ -4,7 +4,7 @@ module.exports.run = (bot, message, args) => {
   if (!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return null;
   if (!message.guild.member(bot.user).hasPermission("BAN_MEMBERS")) return message.reply("Eu não tenho a permissão para banir players!");
   if(!args[0]){
-      message.reply("use **!permban <@user> <prova>.");
+      message.reply("use **!permban <@user> <prova>**.");
       return;
   }
   let user = message.mentions.users.first();
