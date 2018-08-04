@@ -12,7 +12,6 @@ module.exports.run = async (client, message, args) => {
     const embed1 = new Discord.RichEmbed()
   .setAuthor('Anúncio:', "https://cdn.discordapp.com/emojis/450112878108999680.gif?v=1")
   .setDescription(`${args1}`)
-  .setColor(role.color)
   .setTimestamp()
   .setFooter(`Feito por ${message.author.username}`, message.author.avatarURL)
   return message.channel.send({embed: embed1}); 
