@@ -46,7 +46,7 @@ bot.on('guildMemberAdd', member =>{
       let embed = new Discord.RichEmbed()
       .setAuthor("Bem-vindo!!!", member.user.displayAvatarURL)
       .setColor('RANDOM')
-      .addField(':zzz: Novo membro!', `${member} veio sonhar conosco, seja bem-vindo(a)!`)
+      .addField('Você é o membro **${message.guild.memberCount}** do PapoSad!', `${member}, leia as regras e se divirta!`)
       .setTimestamp()
 
       channel.sendEmbed(embed);
