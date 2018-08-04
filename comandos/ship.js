@@ -2,7 +2,6 @@ const Discord = require ("discord.js");
 module.exports.run = (bot, message, args) => {
     if (!args[0]){
         const msg = new Discord.RichEmbed()
-        .setTitle('Comando: !ship')
         .setDescription(`Como usar:\n
 **Sintaxe:** !ship <usuário1 e usuário2>.
 **Exemplo:** !ship mrtaazer e mrtazer.`)
