@@ -6,5 +6,5 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(`:ping_pong: **|** Seu ping é de **${Math.round(client.ping)}ms**!`);
 }
 module.exports.help = {
-    name: "ping"
+    name: "ms"
     }
