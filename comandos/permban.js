@@ -25,5 +25,5 @@ module.exports.run = (bot, message, args) => {
   modlog.send(embed)
 }
 module.exports.help = {
-  name: "ban"
+  name: "permban"
 };
