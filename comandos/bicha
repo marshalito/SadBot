@@ -1,0 +1,11 @@
+const Discord = require('discord.js')
+module.exports.run = async (client, message, args) => {
+    if (!message.guild.member(message.author).hasPermission("SEND_MESSAGES")) return
+	if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.reply(":x: Permissões insuficientes.");
+    
+    var reason = message.content.split(" ").slice(1).join(" ");
+  message.channel.send(`{reason} **é bicha!!**`); 
+}
+module.exports.help = {
+    name: "bicha"
+    }
